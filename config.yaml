@@ -1,0 +1,59 @@
+# Mental Health Prediction - Configuration
+
+# Project Settings
+project:
+  name: "Mental Health Prediction"
+  version: "1.0.0"
+  description: "ML project for mental health prediction"
+
+# Data Configuration
+data:
+  raw_path: "data/raw/mental_health.csv"
+  processed_path: "data/processed/mental_health_processed.csv"
+  test_size: 0.2
+  random_state: 42
+  target_column: "target"
+
+# Preprocessing Configuration
+preprocessing:
+  handle_missing: true
+  missing_strategy: "mean"  # Options: mean, median, mode, drop
+  encode_categorical: true
+  scale_numerical: true
+  remove_duplicates: true
+
+# Feature Engineering Configuration
+feature_engineering:
+  apply_pca: false
+  pca_variance: 0.95
+  select_features: false
+  n_features: 10
+
+# Training Configuration
+training:
+  cross_validation_folds: 5
+  hyperparameter_tuning: false
+  scoring_metric: "accuracy"
+
+# Model Configuration
+models:
+  output_dir: "models"
+  save_best_model: true
+
+# Flask Configuration
+flask:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+# Monitoring Configuration
+monitoring:
+  log_metrics: true
+  save_visualizations: true
+  output_dir: "visualizations"

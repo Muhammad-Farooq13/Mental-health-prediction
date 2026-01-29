@@ -1,0 +1,34 @@
+# Git Attributes Configuration
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Explicitly declare text files
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+
+# Denote binary files
+*.pkl binary
+*.h5 binary
+*.joblib binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# Python
+*.py linguist-language=Python
+*.ipynb linguist-language=Jupyter Notebook
+
+# Documentation
+*.md linguist-documentation
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
